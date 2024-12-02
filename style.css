@@ -1,0 +1,471 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 20px;
+  font-size: 15px;
+}
+
+html {
+  background-color: aliceblue;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.layar-dalam {
+  width: 1000px;
+  margin: auto;
+}
+
+nav {
+  z-index: 100;
+  color: #fff;
+  text-align: center;
+  position: fixed;
+  border-bottom: 1px solid #b1b1b1;
+  line-height: 60px;
+  backdrop-filter: blur(100px);
+  background-color: #fff;
+  width: 100%;
+}
+
+nav .putih {
+  /* background-color: #fff; */
+}
+
+nav .logo {
+  float: left;
+  position: relative;
+  line-height: 55px;
+  text-align: center;
+}
+
+nav .logo img {
+  width: 180px;
+  vertical-align: middle;
+}
+
+nav .menu {
+  float: right;
+  height: 60px;
+  max-width: 600px;
+}
+
+nav .menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav .menu ul li {
+  list-style-type: none;
+  float: left;
+  line-height: 60px;
+}
+
+nav ul li a {
+  color: rgb(30, 30, 114);
+  text-align: center;
+  padding: 0px 16px 0px 16px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+#background-video {
+  position: fixed; /* Menjaga video tetap di tempat meskipun halaman digulir */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Mengisi seluruh tinggi layar */
+  object-fit: cover; /* Memastikan video mengisi seluruh area tanpa distorsi */
+  z-index: -1;
+}
+
+.button {
+  position: absolute;
+  top: 90%; /* Menempatkan tombol di tengah vertikal */
+  left: 50%; /* Menempatkan tombol di tengah horizontal */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Menyesuaikan agar tombol benar-benar di tengah */
+  padding: 20px 40px;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.205
+  ); /* Latar belakang semi-transparan */
+  border: none;
+  font-size: 20px;
+  color: rgb(139, 135, 135);
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+/* Efek hover pada tombol */
+.button:hover {
+  background-color: rgb(5, 5, 5); /* Mengubah warna latar belakang saat hover */
+}
+
+.tombol-menu {
+  position: absolute;
+  top: 1.7rem;
+  right: 1rem;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+}
+
+.tombol-menu .garis {
+  height: 3px;
+  background-color: #b1b1b1;
+}
+
+@media screen and (max-width: 991.98px) {
+  .layar-dalam {
+    width: 90%;
+  }
+
+  nav .menu ul {
+    display: none;
+    margin-top: 60px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  nav .menu ul li {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+    line-height: 40px;
+  }
+
+  .tombol-menu {
+    display: flex;
+  }
+
+  .contact .row {
+    flex-wrap: wrap;
+  }
+
+  .contact .row .map {
+    height: 30rem;
+  }
+}
+
+/* section About */
+
+#about {
+  background-color: #f4f4f4;
+  padding: 50px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(
+    140vh - 80px
+  ); /* Menyusun konten agar berada di tengah-tengah layar */
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  gap: 40px; /* Memberikan jarak antara gambar dan teks */
+}
+
+.about-image {
+  width: 400px; /* Lebar gambar */
+  height: auto; /* Menjaga proporsi gambar */
+  border-radius: 8px; /* Memberikan border melengkung pada gambar */
+}
+
+#about h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+  color: rgb(30, 30, 114);
+  text-align: left;
+}
+
+.about-text {
+  text-align: left; /* Memastikan teks di sebelah kiri */
+}
+
+.about-text h1::after {
+  content: "";
+  position: absolute;
+  bottom: -5px; /* Menentukan jarak garis bawah dari teks */
+  left: 0;
+  width: 100%;
+  height: 2px; /* Ketebalan garis bawah */
+  background-color: rgb(30, 30, 114); /* Warna garis bawah */
+}
+
+#about p {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  color: gray;
+}
+
+/* News */
+
+#news-header {
+  background-color: rgb(30, 30, 114);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  padding-top: 20vh;
+}
+
+#news-header h1 {
+  font-size: 36px;
+  margin: 0 0 10px;
+}
+
+#news-header p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+#news-header .search-bar {
+  margin-top: 20px;
+}
+
+#news-header .search-bar input {
+  padding: 10px;
+  width: 300px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+#news-header .search-bar button {
+  padding: 10px 20px;
+  background-color: #ff5722;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#news-header .search-bar button:hover {
+  background-color: #e64a19;
+}
+
+#news {
+  text-align: center;
+  padding: 80px 20px 20px; /* Menambahkan padding di bawah navbar */
+  text-align: center;
+  height: calc(200vh - 80px);
+}
+
+.news-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsif */
+  gap: 20px;
+  justify-items: center;
+}
+
+.news-item {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  max-width: 350px;
+  transition: transform 0.3s ease;
+}
+
+.news-item:hover {
+  transform: scale(1.05);
+}
+
+.news-item img {
+  width: 100%;
+  height: auto;
+}
+
+.news-item .news-content {
+  padding: 15px;
+}
+
+.news-item h2 {
+  font-size: 24px;
+  margin: 0 0 10px;
+  color: darkblue;
+}
+
+.news-item p {
+  font-size: 16px;
+  color: rgba(6, 35, 124, 0.526);
+}
+
+.news-item .read-more {
+  display: inline-block;
+  margin-top: 10px;
+  color: #007bff95;
+  text-decoration: none;
+}
+
+.news-item .read-more:hover {
+  text-decoration: underline;
+}
+
+/* Styling untuk bagian lowongan kerja */
+main {
+  padding: 20px;
+  padding-top: 20vh;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  margin: 15% auto;
+  width: 300px;
+  border-radius: 5px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Styling untuk daftar lowongan */
+#lowonganList {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.lowongan-item {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin: 10px;
+  width: calc(33.33% - 20px);
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.lowongan-item h3 {
+  margin: 0;
+}
+
+.lowongan-item p {
+  margin: 5px 0;
+}
+
+.lowongan-item span {
+  font-weight: bold;
+}
+
+/* Contact */
+.contact {
+  padding: 8rem 7% 1.4rem;
+}
+
+.contact h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+  color: #05478d8d;
+}
+
+.contact .row {
+  display: flex;
+  margin-top: 2rem;
+  background-color: #ccc;
+  /* flex-wrap: wrap; */
+}
+
+.contact .row .map {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.contact-info {
+  flex: 1 1 45rem;
+  padding: 5rem 2rem;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.contact-info h3 {
+  margin-top: 0;
+  color: rgb(30, 30, 114);
+}
+
+.contact-info p {
+  margin: 10px 0;
+  text-align: left;
+  color: rgb(99, 99, 112);
+}
+
+.contact-info a {
+  text-decoration: none;
+  color: rgb(30, 30, 114);
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
